@@ -6,8 +6,123 @@
     <title>Our Services - Eon AI</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add these new styles to your existing CSS */
+        body {
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Animated gradient waves */
+        .wave-bg {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.15;
+        }
+        
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                rgba(110, 72, 170, 0.8) 0%, 
+                rgba(71, 118, 230, 0.6) 50%, 
+                rgba(110, 72, 170, 0.8) 100%);
+            animation: wave 15s linear infinite;
+        }
+        
+        .wave:nth-child(2) {
+            animation-delay: -5s;
+            opacity: 0.5;
+        }
+        
+        .wave:nth-child(3) {
+            animation-delay: -10s;
+            opacity: 0.3;
+        }
+        
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Floating AI elements */
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            filter: blur(1px);
+        }
+        
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            font-size: 30px;
+            animation: float 15s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(2) {
+            top: 60%;
+            left: 80%;
+            font-size: 40px;
+            animation: float 18s ease-in-out infinite reverse;
+        }
+        
+        .floating-element:nth-child(3) {
+            top: 40%;
+            left: 50%;
+            font-size: 25px;
+            animation: float 12s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(4) {
+            top: 80%;
+            left: 30%;
+            font-size: 35px;
+            animation: float 20s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-40px) rotate(5deg); }
+        }
+        
+        /* Glow effect for service cards */
+        .service:hover {
+            box-shadow: 0 0 25px rgba(110, 72, 170, 0.4);
+        }
+    </style>
 </head>
 <body>
+    <!-- New background elements -->
+    <div class="wave-bg">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    
+    <div class="floating-elements">
+        <div class="floating-element"><i class="fas fa-robot"></i></div>
+        <div class="floating-element"><i class="fas fa-brain"></i></div>
+        <div class="floating-element"><i class="fas fa-microchip"></i></div>
+        <div class="floating-element"><i class="fas fa-chart-network"></i></div>
+    </div>
+
     <header>
         <div class="container">
             <div class="logo">
@@ -63,6 +178,23 @@
                         <li>Cross-channel campaign management</li>
                         <li>Audience targeting & segmentation</li>
                         <li>Performance analytics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Video/GFX Editing</h3>
+                    <p>Professional video editing and motion graphics services to create stunning visual content that captures attention and communicates your brand message effectively.</p>
+                    <ul>
+                        <li>Commercial video production</li>
+                        <li>Social media video editing</li>
+                        <li>Motion graphics & animation</li>
+                        <li>AI-enhanced post-production</li>
+                        <li>Branded template creation</li>
                     </ul>
                 </div>
             </div>
