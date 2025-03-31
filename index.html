@@ -6,6 +6,117 @@
     <title>Eon AI - Digital Marketing Agency</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add these new styles to your existing CSS */
+        .testimonials {
+            background-color: #0f0f0f;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .testimonials h2 {
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: var(--accent-color);
+        }
+        
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-slide {
+            display: none;
+            animation: fade 1s ease-in-out;
+        }
+        
+        .testimonial-slide.active {
+            display: block;
+        }
+        
+        @keyframes fade {
+            from {opacity: 0.4;}
+            to {opacity: 1;}
+        }
+        
+        .testimonial-card {
+            background-color: var(--gray-color);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 0 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .testimonial-text {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .client-details h4 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .client-details p {
+            margin: 5px 0 0;
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .testimonial-nav {
+            margin-top: 30px;
+        }
+        
+        .testimonial-nav button {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-nav button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(110, 72, 170, 0.4);
+        }
+        
+        .testimonial-nav button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -41,11 +152,13 @@
                 <h2>About Eon AI</h2>
                 <p>Eon AI is a cutting-edge digital marketing agency that leverages artificial intelligence to optimize your marketing strategies. Our team of experts and advanced algorithms work together to deliver measurable results.</p>
                 <p>We help businesses of all sizes establish a strong online presence, generate qualified leads, and maximize their return on investment.</p>
+            </div>
             <div class="about-image">
-    <div class="glowing-box">
-        <img src="logo.PNG" alt="Eon AI Logo" class="logo-in-box">
-    </div>
-</div>
+                <div class="glowing-box">
+                    <img src="images/logo.png" alt="Eon AI Logo" class="logo-in-box">
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="features">
@@ -67,6 +180,61 @@
                     <h3>Innovative Approach</h3>
                     <p>We stay ahead of trends to keep your marketing fresh and effective.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-slide active">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Eon AI transformed our digital presence completely. Our website traffic increased by 300% within just 3 months of working with them.</p>
+                        <div class="client-info">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson" class="client-avatar">
+                            <div class="client-details">
+                                <h4>Sarah Johnson</h4>
+                                <p>CEO, TechSolutions Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Their AI-driven ad campaigns reduced our customer acquisition cost by 40% while doubling our conversion rate. Simply remarkable!</p>
+                        <div class="client-info">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="client-avatar">
+                            <div class="client-details">
+                                <h4>Michael Chen</h4>
+                                <p>Marketing Director, UrbanFit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">The video editing and social media strategy from Eon AI helped us go viral twice in one quarter. Their team understands modern marketing.</p>
+                        <div class="client-info">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez" class="client-avatar">
+                            <div class="client-details">
+                                <h4>Emily Rodriguez</h4>
+                                <p>Founder, BrewHaus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-nav">
+                <button id="prev-testimonial"><i class="fas fa-chevron-left"></i> Previous</button>
+                <button id="next-testimonial">Next <i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
@@ -102,10 +270,43 @@
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('active');
+   <!-- Replace just the JavaScript portion (keep all the HTML and CSS the same) -->
+<script>
+    // Mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('active');
+    });
+
+    // Testimonial slider functionality with infinite loop
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial-slide');
+    const totalTestimonials = testimonials.length;
+    
+    function showTestimonial(index) {
+        // Handle looping
+        if (index >= totalTestimonials) {
+            currentTestimonial = 0;
+        } else if (index < 0) {
+            currentTestimonial = totalTestimonials - 1;
+        }
+        
+        testimonials.forEach((testimonial, i) => {
+            testimonial.classList.toggle('active', i === currentTestimonial);
         });
-    </script>
+    }
+    
+    document.getElementById('prev-testimonial').addEventListener('click', function() {
+        currentTestimonial--;
+        showTestimonial(currentTestimonial);
+    });
+    
+    document.getElementById('next-testimonial').addEventListener('click', function() {
+        currentTestimonial++;
+        showTestimonial(currentTestimonial);
+    });
+    
+    // Initialize
+    showTestimonial(0);
+</script>
 </body>
 </html>
